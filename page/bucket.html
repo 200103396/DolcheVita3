@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Корзина</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>NEW COLLECTION</title>
+	 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+	<link rel="stylesheet" type="text/css" href="css/pl1.css">
+</head>
+<body>
+   <header>
+
+      <nav class = "navbar">
+
+        <div class = "container">
+
+          <a href = "index.html" class = "navbar-brand">DOLCE VITA</a>
+
+          <div class = "navbar-nav">
+
+            <a href = "">Платья</a>
+
+            <a href = "page/купкуп.html">Купальники</a>
+
+            <a href = "page/спортодежда.html">Спортивная одежда</a>
+
+            <a href = "page/аксессуары.html">Аксессуары</a>
+
+          </div>
+
+        </div>
+
+      </nav>
+
+    </header>
+
+   <section>
+    <div class = "card-item">
+     <div class = "card">
+       <div class = "card-img">
+         <img src="img/инст1.jpg">
+       </div>
+       <div class = "card-dannye">
+    <p>black dress</p>
+    <p>prise: <h4> 10000</h4><span> tg</span> </p>
+     <div class = "itog">
+       <h3>Total prise : <p class = "prise">10000</p><span> tg</span></h3>
+       
+       </div>
+     </div>
+</div>
+</div>
+<div class = "oplatit">
+  <h4>Доставка по всему Кз 2000тг</h4>
+       <button>Купить и оплатить</button>
+</div>
+   </section>
+ <footer>
+
+      <div class = "social-links">
+
+        <a href = "#"><i class = "fab fa-facebook-f"></i></a>
+
+        <a href = "#"><i class = "fab fa-twitter"></i></a>
+
+        <a href = "https://instagram.com/dolce.vita_kz?utm_medium=copy_link"><i class = "fab fa-instagram"></i></a>
+
+        <a href = "#"><i class = "fab fa-pinterest"></i></a>
+
+      </div>
+
+      <span>ONLINE SHOP</span>
+
+    </footer>
+<script type="text/javascript">
+  var sectionSt = sessionStorage.getItem('TheArray');
+  var ss = JSON.parse(sectionSt);
+
+
+ const neeew = document.querySelector('.card-item');
+
+ const newOne = `<div class = "card">
+       <div class = "card-img">
+         <img src="${ss.imgS}">
+       </div>
+       <div class = "card-dannye">
+    <p>${ss.title}</p>
+    <p>prise: <h4> 10000</h4><span> tg</span> </p>
+     <div class = "itog">
+       <h3>Total prise : <p class = "prise">10000</p><span> tg</span></h3>
+       
+       </div>
+     </div>
+</div>`;
+
+neeew.insertAdjacentHTML('beforeend',newOne);
+</script>
+
+</body>
+</html>
+</body>
+</html>
