@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:\Users\Lenovo\Desktop\student\Database Management Systems\ass_5\sakila.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="125"/><column_width id="3" width="8574"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,8:mainNewTable"/><default_encoding codec=""/><browse_table_settings/></tab_browse><tab_sql><sql name="SQL 1">SELECT rental_id, rental_date, inventory_id, customer_id, COUNT((SELECT SUBSTRING(rental_date, 1, 10) FROM rental)) 
+OVER(PARTITION BY SUBSTRING(rental_date, 1, 10)) AS 'overall in day'
+FROM rental;</sql><sql name="SQL 2">SELECT rental.rental_id, rental_date, category.name, film.title, LEAD(film.title) OVER() AS 'next_movie'
+FROM rental, inventory, film_category, category, film
+WHERE category.category_id = film_category.category_id AND 
+film_category.film_id = inventory.film_id AND 
+inventory.inventory_id = rental.inventory_id AND 
+film_category.film_id = film.film_id 
+ORDER BY rental.rental_date;</sql><current_tab id="1"/></tab_sql></sqlb_project>
